@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pattaya', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f2f6ff;
+    color: #ffac47;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navigation-bar {
+    height: 14vh;
+    background-color: #ffac47;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+    color: whitesmoke;
+}
+
+.logo {
+    display: flex;
+    /* border: 1px solid black; */
+    width: 35%;
+    align-items: center;
+}
+
+.logo a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.logo a:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#logo-img {
+    width: 150px;
+    /* border: 1px solid red; */
+}
+
+.nav-items {
+    display: flex;
+    /* border: 1px solid black; */
+    width: 35%;
+}
+
+.nav-items ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 1.3em;
+}
+
+.nav-items ul a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition-property: all;
+    transition-duration: 0.6s;
+}
+
+.nav-items ul a:hover {
+    background-color: whitesmoke;
+    color: #ffac47;
+}
+
+.welcome-message {
+    /* background-color: aqua; */
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: whitesmoke;
+    font-weight: 900;
+    position: relative;
+}
+
+.welcome-message h1 {
+    text-shadow: 0px 0px 15px black;
+    /* transition: all 2s linear 0s; */
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+
+.welcome-message h1:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    text-shadow: 0px 0px 5px #ffac47;
+}
+
+.welcome-message h1::selection {
+    background-color: #f2f6ff;
+    color: #ffac47;
+}
+
+.welcome-message::before {
+    content: '';
+    background-image: url("../Images/cover-art.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.cuisines {
+    /* border: 2px solid black; */
+    text-align: center;
+    padding: 16px;
+    margin-top: 5%;
+}
+
+.cuisine-header {
+    font-size: 4rem;
+}
+
+.section-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cuisine-image {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffac47;
+    color: whitesmoke;
+    margin-top: 3%;
+    border-radius: 30px;
+    width: 453px;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+
+.cuisine-image:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+    box-shadow: 0px 0px 5px black;
+}
+
+.cuisine-image img {
+    width: 100%;
+    height: 85%;
+}
+
+.cuisine-image h2 {
+    padding: 16px;
+}
+
+footer {
+    background-color: #ffac47;
+    color: whitesmoke;
+    height: 35vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4%;
+}
+
+#address-header,
+#support-header,
+#social-header {
+    font-size: 1.5rem;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#logos-social-media {
+    /* background-color: whitesmoke; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    /* zoom: 1.5; */
+    font-size: 1.5rem;
+}
+
+
+/* Styling For Form */
+
+body {
+    background-color: #f2f6ff;
+    margin: 0;
+}
+
+form {
+    border: 1px solid #ccc;
+    width: 700px;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+}
+
+#form-heading {
+    font-size: 32px;
+    padding-top: 56px;
+    padding-bottom: 32px;
+}
+
+.logos {
+    width: 50px;
+    height: 50px;
+    padding: 16px 32px;
+}
+
+.logo-section {
+    background-color: #f2f6ff;
+}
+
+.input-fields-container {
+    padding: 80px 80px 40px;
+}
+
+.input-element {
+    font-size: 18px;
+    padding-bottom: 12px;
+    margin-bottom: 36px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+}
+
+#register-button {
+    background-color: #ffac47;
+    padding: 12px 24px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

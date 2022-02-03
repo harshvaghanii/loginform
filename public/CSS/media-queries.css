@@ -1,0 +1,178 @@
+@media screen and (max-width: 600px) {
+    .navigation-bar {
+        /* display: block; */
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        /* border: 2px solid black; */
+    }
+    .logo {
+        /* border: 2px solid black; */
+        /* justify-content: space-around; */
+        width: 90%;
+        position: absolute;
+        left: -21px;
+        height: 100%;
+        margin: auto;
+    }
+    .logo a {
+        /* background-color: aqua; */
+        /* border: 2px solid black; */
+        font-size: 14px;
+    }
+    #logo-img {
+        width: 140px;
+        /* border: 2px solid black; */
+    }
+    .line {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+    }
+    #line1,
+    #line2,
+    #line3 {
+        transition: all 0.3s ease-in-out;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+    .nav-items {
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* border: 1px solid black; */
+        width: 100%;
+    }
+    #nav-link-ul {
+        font-size: 1em;
+        flex-direction: column;
+        background-color: #ffac47;
+        height: 80vh;
+        z-index: 1;
+        clip-path: circle(100px at 95% -20%);
+        -webkit-clip-path: circle(100px at 95% -20%);
+        transition: all 0.5s ease-in-out;
+        /* transition-delay: 2s; */
+    }
+    .welcome-message {
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        text-align: center;
+        font-size: 1.8rem;
+        /* margin-top: 150%; */
+    }
+    .cuisine-header {
+        font-size: 3rem;
+    }
+    .cuisine-image {
+        width: 353px;
+        margin-top: 30px;
+    }
+    .cuisine-image h2 {
+        padding: 5px;
+    }
+    footer {
+        height: 110vw;
+        /* background: black; */
+        justify-content: space-evenly;
+    }
+    .address {
+        /* border: 2px solid red; */
+        /* display: block; */
+        width: 100%;
+        text-align: center;
+        /* margin-top: 10px; */
+    }
+    #support {
+        /* border: 2px solid yellow; */
+        /* display: block; */
+        width: 100%;
+        text-align: center;
+        /* margin-top: 30px; */
+    }
+    #socials {
+        /* border: 2px solid green; */
+        /* display: block; */
+        width: 100%;
+        text-align: center;
+        /* margin-top: 30px; */
+    }
+    #logos-social-media {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 18px;
+    }
+    #address-header,
+    #support-header,
+    #social-header {
+        font-size: 16px;
+    }
+}
+
+
+/* For Landscape views */
+
+@media screen and (min-width: 601px) and (max-width: 850px) {
+    .navigation-bar {
+        height: 20vh;
+        font-size: 0.9em;
+    }
+    .logo {
+        margin-left: -32px;
+    }
+    .welcome-message {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+    .cuisine-header {
+        font-size: 5rem;
+    }
+    .cuisine-image {
+        width: 80%;
+        margin-top: 30px;
+    }
+    footer {
+        height: 55vw;
+        /* background: black; */
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .address {
+        /* border: 2px solid red; */
+        /* display: block; */
+        width: 100%;
+        text-align: center;
+        /* margin-top: 10px; */
+    }
+    #support {
+        /* border: 2px solid yellow; */
+        /* display: block; */
+        width: 100%;
+        text-align: center;
+        /* margin-top: 30px; */
+    }
+    #socials {
+        /* border: 2px solid green; */
+        /* display: block; */
+        width: 100%;
+        text-align: center;
+        /* margin-top: 30px; */
+    }
+    #logos-social-media {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 18px;
+    }
+    #address-header,
+    #support-header,
+    #social-header {
+        font-size: 16px;
+    }
+}
