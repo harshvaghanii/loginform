@@ -6,6 +6,7 @@ const hbs = require('hbs');
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+require('dotenv').config({ path: `../.env` });
 require('../database/connection/app.js');
 const register_user = require('../database/schemas/userdata');
 
@@ -53,43 +54,44 @@ app.post('/form', async(req, res) => {
             });
 
 
-            let testAccount = await nodemailer.createTestAccount();
 
             // create reusable transporter object using the default SMTP transport
             let transporter = nodemailer.createTransport({
-                host: "smtp.ethereal.email",
-                port: 587,
-                secure: false, // true for 465, false for other ports
+                service: 'gmail',
                 auth: {
-                    user: "eqcwgfxmsftylsku@ethereal.email", // generated ethereal user
-                    pass: "CmGcJwgfYPWBvQGvDb", // generated ethereal password
+                    user: process.env.EMAIL,
+                    pass: process.env.PASSWORD
                 },
             });
 
-            // send mail with defined transport object
-            let info = await transporter.sendMail({
-                from: `Harsh Vaghani <harshvaghani98@express.com>`, // sender address
+            let mailOptions = {
+                from: `Harsh Vaghani`, // sender address
                 to: `${req.body.email}`, // list of receivers
                 subject: "Thank You for Registering with Vaghani's Kitchen!", // Subject line
-                text: `Hello There!`,
-            });
+                html: `Hello ${req.body.username},<br><br>
+                Greetings of the day!<br><br>
+                We are so happy to welcome you as a member of Vaghani's Kitchen! Thank you for your trust in us! We would love to serve you yummy meals!<br><br>
+                Thanks & Regards,<br>
+                Harsh Vaghani`,
+            }
 
-            console.log("Message sent: %s", info.messageId);
-            // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-
-            // Preview only available when sending through an Ethereal account
-            console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-            // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+            transporter.sendMail(mailOptions, (err, data) => {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log(`Sent!`);
+                }
+            })
 
             const registered = await user.save();
             console.log(`User added!`);
-            res.status(201).render('index');
+            res.status(201).redirect('/');
         }
 
 
 
     } catch (error) {
-        res.status(401).send(error);
+        res.status(401).redirect('/form');
     }
 })
 
