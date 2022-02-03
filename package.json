@@ -9,7 +9,10 @@
   "author": "Harsh Vaghani",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.1",
     "express": "^4.17.2",
-    "hbs": "^4.2.0"
+    "hbs": "^4.2.0",
+    "mongoose": "^6.2.0",
+    "nodemailer": "^6.7.2"
   }
 }
